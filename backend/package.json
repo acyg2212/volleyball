@@ -4,7 +4,9 @@
   "description": "A place for volleyball meetups to happen.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:development": "dotenv nodemon ./bin/www",
+    "start": "per-env"
   },
   "author": "",
   "license": "ISC",
