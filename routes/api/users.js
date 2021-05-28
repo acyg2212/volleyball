@@ -22,7 +22,7 @@ router.post('/', email, nickname, password,
       message = errors[0].msg;
     } else {
       let otherUser = await User.findOne({where: {email: req.body.email}});
-      let otherUser2= await User.findOne({where: {nickname: req:body.nickname}});
+      let otherUser2= await User.findOne({where: {nickname: req.body.nickname}});
       if (otherUser) {
         message = "That email is taken.";
       } else if (otherUser2) {
