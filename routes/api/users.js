@@ -84,10 +84,13 @@ router.put('/', email, nickname, password,
         res.json({ token, user: { ...user.toSafeObject(), message } });
     }));
 
-router.get('/', asyncHandler(async function (req, res, next) {
-    const users = await User.findAll();
-    res.json(users);
+router.get('/', asyncHandler(async function(req, res, next) {
+    res.json("Hello world");
 }));
+// router.get('/', asyncHandler(async function (req, res, next) {
+//     const users = await User.findAll();
+//     res.json(users);
+// }));
 
 router.get('/me', authenticated, function (req, res) {
     res.json({ email: req.user.email });
