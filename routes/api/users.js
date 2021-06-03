@@ -15,6 +15,7 @@ const password = check('password').not().isEmpty().withMessage('Provide a passwo
 
 router.post('/', email, nickname, password,
     asyncHandler(async function (req, res, next) {
+        console.log("top of post route");
         let message;
         const errors = validationResult(req).errors;
         let response = { user: {} };
